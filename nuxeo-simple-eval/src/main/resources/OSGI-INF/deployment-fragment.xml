@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<fragment version="1">
+
+  <!--
+    This fragment will contribute the Servlet declaration in the web.xml
+  -->
+  <extension target="web#SERVLET">
+    <servlet>
+      <servlet-name>OldSchool</servlet-name>
+      <servlet-class>org.nuxeo.ecm.eval.servlet.OldSchoolHandler
+      </servlet-class>
+    </servlet>
+  </extension>
+
+  <!--
+    This fragment will contribute the Servlet mapping in the web.xml
+  -->
+  <!--
+    Of course the mapping is not done for now, you will have to add the
+    url pattern for this to work
+  -->
+  <!--
+  <extension target="web#SERVLET-MAPPING">
+    <servlet-mapping>
+      <servlet-name>...
+    </servlet-mapping>
+  </extension>
+  -->
+</fragment>

@@ -1,0 +1,91 @@
+/* Studio Home pages - lk@nuxeo.com - 11/2009 */
+
+/* Global style */
+
+html, body {
+height:100%;
+}
+
+html, body, div, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+border:0 none;
+font:normal 12px "Lucida Grande", Verdana, sans-serif;
+margin:0;
+padding:10;
+color:#333;
+}
+
+iframe {
+height:280px;
+}
+
+h1 {
+font:bold 1.9em "Lucida Grande", Verdana, sans-serif;
+margin:10px 0 15px;
+color:black;
+}
+
+h1 span, h1 a, h1 a:link, h1 a:active, h1 a:visited, h1 a:hover {
+font-size: 100%;
+}
+
+h2 {
+font:normal 1.7em "Lucida Grande", Verdana, sans-serif;
+margin:10px 0 15px;
+border-bottom:1px dotted #CCCCCC;
+color:black;
+}
+
+h2 a, h2 a:link, h2 a:active, h2 a:visited, h2 a:hover {
+font-size: 100%;
+}
+
+h3{
+font:normal 17px "Lucida Grande", Verdana, sans-serif;
+margin:10px 0 15px;
+color:black;
+border-bottom:1px dotted #CCCCCC;
+}
+
+p {
+margin:3px 0px 10px;
+}
+
+a, a:link, a:active, a:visited {
+color:#0066CC;
+text-decoration:none;
+}
+
+a:hover {
+color:#014A93;
+text-decoration:underline;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+content:"";
+}
+
+blockquote, q {
+quotes:"" "";
+}
+
+ol {
+margin-left:2em;
+}
+
+ul {
+list-style-image:url(../images/bullet.png);
+margin-left:2em;
+}
+
+:focus {
+outline-style:none;
+}
+
+.directLink {
+  display:none;
+}
+
+.messageBlock {
+  white-space: pre;
+  font-size: 11pt;
+}

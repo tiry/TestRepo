@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 1
+Bundle-Name: nuxeo simple evaluation project 
+Bundle-SymbolicName: org.nuxeo.ecm.eval;singleton:=true
+Bundle-Version: 0.0.1
+Bundle-Vendor: Nuxeo
+Nuxeo-Require: org.nuxeo.ecm.webengine.core,
+Nuxeo-WebModule: org.nuxeo.ecm.eval.webengine.EvalWebEngineApp
+
