@@ -20,12 +20,12 @@ import org.nuxeo.common.utils.Base64;
 
 /**
  * Simple implementation of the {@link MessageService}.
- *
+ * 
  * This implementation uses a simple encryption system so that reading the
  * message without reading the code is not that simple :)
- *
+ * 
  * @author Tiry (tdelprat@nuxeo.com)
- *
+ * 
  */
 public class MessageServiceImpl implements MessageService {
 
@@ -143,7 +143,7 @@ public class MessageServiceImpl implements MessageService {
         for (String key : messages.keySet()) {
             sb.append(KeyHelper.encryptKey(key));
             sb.append(" = ");
-            sb.append(messages.get(key).replace("\n", ""));
+            sb.append(messages.get(key).replace("\n", "").replace("\r", ""));
             sb.append("\n");
         }
 

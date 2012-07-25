@@ -20,7 +20,7 @@ public class ChatServiceImpl implements ChatService {
 
     protected Map<String, List<ChatEntry>> messages = new HashMap<String, List<ChatEntry>>();
 
-    protected static final int MSG_HISTORY = 20;
+    protected static final int MSG_HISTORY = 15;
 
     protected static final String CMD_PREFIX = ":";
 

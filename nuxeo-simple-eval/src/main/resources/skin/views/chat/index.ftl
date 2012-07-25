@@ -20,7 +20,7 @@
 
 #chatRoom1 {
   border: 2px solid green ;
-  width:250px;
+  width:350px;
 }
 </style>
 </@block>
@@ -30,7 +30,7 @@
   <h1> Chat Server </h1>
 
 <p>
-This is a very simple Chat simulator.<br/>
+This is a very stupid Chat simulator.<br/>
 You will have to use chat room1 and talk with Nono (a stupid bot) that will ask you questions.<br/>
 But it looks like the ChatServer is bugged and will crash sooner or later, so unless you are very fast, you will need to fix it so that Nono can give you the key to the next level ...
 </p>
@@ -86,7 +86,9 @@ var quotes = ["Anybody there ?",":clear","yo","how are you ?", "don't care", ":k
 
 function serverError(jqXHR, textStatus, errorThrown) {
   continueChat = false;
-  alert("error!");
+  alert("So sad ... chat server crashed with " + errorThrown + textStatus);
+  alert("Bye !");
+  window.location.href='${This.path}/bsod';
 }
 
 function saySomething() {
@@ -104,10 +106,13 @@ function interactiveMessage() {
   sendMessage(user, roomName,message);
   jQuery("#chatPrompt").val("");
   refreshRoom(roomName);
+  jQuery("#chatPrompt").focus();
 }
 
 function sendMessage(user, roomName, message) {
- jQuery.ajax({ url : '${This.path}/' + roomName + '/' + user, contentType : "multipart/form-data", type : "POST",data : message, "error" : serverError});
+ if (continueChat) {
+   jQuery.ajax({ url : '${This.path}/' + roomName + '/' + user, contentType : "multipart/form-data", type : "POST",data : message, "error" : serverError});
+ }
 }
 
 window.setInterval(function() {if (continueChat) {refreshRoom(saySomething());}}, 20);

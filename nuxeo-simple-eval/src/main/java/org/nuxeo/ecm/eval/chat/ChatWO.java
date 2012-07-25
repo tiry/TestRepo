@@ -19,9 +19,9 @@ import org.nuxeo.ecm.webengine.model.WebObject;
 
 /**
  * WebObject used to expose the ChatService via JAX-RS
- *
+ * 
  * @author Tiry (tdelprat@nuxeo.com)
- *
+ * 
  */
 @WebObject(type = "chat")
 public class ChatWO extends BaseWO {
@@ -35,8 +35,8 @@ public class ChatWO extends BaseWO {
     @GET
     @Produces("text/html")
     @Path(value = "room/{roomName}")
-    public Object getRoom(@PathParam("roomName") String roomName)
-            throws Exception {
+    public Object getRoom(@PathParam("roomName")
+    String roomName) throws Exception {
         List<String> messages = ServiceFactory.getService(ChatService.class).getMessages(
                 roomName);
         return getView("room").arg("messages", messages);
@@ -45,9 +45,10 @@ public class ChatWO extends BaseWO {
     @POST
     @Produces("text/html")
     @Path(value = "{roomName}/{userName}")
-    public Object postMessage(@PathParam("roomName") String roomName,
-            @PathParam("userName") String userName,
-            @Context HttpServletRequest request) throws Exception {
+    public Object postMessage(@PathParam("roomName")
+    String roomName, @PathParam("userName")
+    String userName, @Context
+    HttpServletRequest request) throws Exception {
 
         String message = FileUtils.read(getContext().getRequest().getInputStream());
 
@@ -57,4 +58,10 @@ public class ChatWO extends BaseWO {
         return Response.status(200).build();
     }
 
+    @GET
+    @Produces("text/html")
+    @Path(value = "bsod")
+    public Object bsod() throws Exception {
+        return getView("bsod");
+    }
 }
