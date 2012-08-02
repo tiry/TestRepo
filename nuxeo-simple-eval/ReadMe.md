@@ -53,6 +53,12 @@ If you progress step by step in the right order, you will be given the required 
 
 2 Eyes, 1 brain, 1 keyboard and some knowledge about java and web technologies should be enough to go through all the steps of this little exercise.
 
+## Some advices 
+
+Between this version and the one with all bugs fixed, there are about 100 lines of code modified, so if you start writting a lot of code, this may be a sign that you are not taking the right direction.
+
+There are several hints to help you inside the code : comments, help methods, tests ... 
+
 ## Getting started
 
 The very first step is about making this web application saying welcome to you.
